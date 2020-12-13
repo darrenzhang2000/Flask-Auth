@@ -1,5 +1,10 @@
 from flask import Flask, render_template
 
+import pymongo
+ 
+client = pymongo.MongoClient("mongodb+srv://testuser:testuser@cluster0.uqb77.mongodb.net/auth?retryWrites=true&w=majority")
+db = client.test
+ 
 app = Flask(__name__)
 
 @app.route('/')
